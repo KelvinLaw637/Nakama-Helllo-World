@@ -7,7 +7,5 @@
 *.so
 
 # Folders
-.vscode
-.csproj
-
-
+*.vscode
+*.csproj
