@@ -1,22 +1,17 @@
-# Nakama-Helllo-World
-Unity3d with Nakama Helllo-World
+# Running Nakama with docker-compose
+###### Docker Compose simplifies running more than one Docker container in conjunction. For Nakama, we’ll need two containers: one for Nakama itself and one for the database it relies on, CockroachDB.
 
-#Running Nakama for backend
-Running Nakama with docker-compose¶
-Docker Compose simplifies running more than one Docker container in conjunction. For Nakama, we’ll need two containers: one for Nakama itself and one for the database it relies on, CockroachDB.
+###### You can choose to configure the Nakama and CockroachDB containers without Docker Compose but we do not recommend it when you’re starting out.
 
-You can choose to configure the Nakama and CockroachDB containers without Docker Compose but we do not recommend it when you’re starting out.
-
-Docker Compose uses YAML configuration files to declare which containers to use and how they should work together.
+###### Docker Compose uses YAML configuration files to declare which containers to use and how they should work together.
 
 1. Let’s start by creating the Nakama Docker-Compose file:
-
 Create a file called docker-compose.yml and edit it in your favourite text editor:
 
+
+
 docker-compose.yml
-
-################################
-
+```
 version: '3'
 services:
   cockroachdb:
@@ -63,8 +58,8 @@ services:
       retries: 5
 volumes:
   data:
-  
-################################
+```
+
 Windows users
 
 If you are trying to run Nakama via Docker-Compose on Windows, you'll need to make a small change to the downloaded docker-compose.yml file. Follow this instruction to bind the correct path.
@@ -73,8 +68,12 @@ If logging output does not immediately appear in stdout add tty: true to the nak
 
 2. Next, we’ll ask Docker Compose to follow the instructions in the file we just downloaded:
 
-Shell:
-  docker-compose -f docker-compose.yml up
+Shell
+
+
+```
+docker-compose -f docker-compose.yml up
+```
 
 Docker Compose will download the latest CockroachDB and Nakama images published on Docker Hub.
 
