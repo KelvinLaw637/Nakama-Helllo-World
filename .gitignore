@@ -1,0 +1,13 @@
+# Created by Kelvinlaw637@gmail.com
+
+### Go ###
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+.vscode
+.csproj
+
+
