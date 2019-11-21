@@ -1,9 +1,15 @@
-# Running Nakama with docker-compose
+#### First Download Docker app: https://hub.docker.com/?overlay=onboarding
+
 ###### Docker Compose simplifies running more than one Docker container in conjunction. For Nakama, we’ll need two containers: one for Nakama itself and one for the database it relies on, CockroachDB.
 
 ###### You can choose to configure the Nakama and CockroachDB containers without Docker Compose but we do not recommend it when you’re starting out.
 
 ###### Docker Compose uses YAML configuration files to declare which containers to use and how they should work together.
+
+
+### Running Nakama with docker-compose
+
+
 
 1. Let’s start by creating the Nakama Docker-Compose file:
 Create a file called docker-compose.yml and edit it in your favourite text editor:
@@ -78,3 +84,5 @@ docker-compose -f docker-compose.yml up
 Docker Compose will download the latest CockroachDB and Nakama images published on Docker Hub.
 
 3. You now have both CockroachDB and Nakama running on your machine, available at 127.0.0.1:26257 and 127.0.0.1:7350 respectively.
+
+
