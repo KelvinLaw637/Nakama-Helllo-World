@@ -91,6 +91,7 @@ Docker Compose will download the latest CockroachDB and Nakama images published 
 
 Create a new project of Unity3D. Seach the nakama package in Unity asset store. Download and import the nakama pakage into your project.After deploy nakama in docker app, you could just connect nakama server.
 
+```
 //Use the connection credentials to build a client object.
 // using Nakama;
 const string scheme = "http";
@@ -103,3 +104,5 @@ var client = new Client(scheme, host, port, serverKey);
 var deviceId = SystemInfo.deviceUniqueIdentifier;
 var session = await client.AuthenticateDeviceAsync(deviceId);
 Debug.Log(session);
+```
+
