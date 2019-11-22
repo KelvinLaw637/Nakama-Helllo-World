@@ -86,3 +86,9 @@ Docker Compose will download the latest CockroachDB and Nakama images published 
 3. You now have both CockroachDB and Nakama running on your machine, available at 127.0.0.1:26257 and 127.0.0.1:7350 respectively.
 
 
+
+## Setup Unity3D Project
+
+1.Create a new project of Unity3D.Download and import the nakama pakage into your project.After deploy nakama in docker app. you could just connect nakama server.
+
+
